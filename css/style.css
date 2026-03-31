@@ -1,0 +1,175 @@
+/* Custom Styles and Micro-animations for Biglittles Couture */
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom Cursor & Selection */
+@media (min-width: 768px) {
+    body, a, button, input, select, textarea, .cursor-pointer {
+        cursor: none !important;
+    }
+}
+::selection {
+    background: #C9A84C;
+    color: #1A1A1A;
+}
+
+/* Custom Luxury Cursor */
+.custom-cursor {
+    width: 6px;
+    height: 6px;
+    background-color: #C9A84C;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, border 0.3s ease;
+}
+
+.custom-cursor.cursor-hover {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(201, 168, 76, 0.05);
+    border: 1px solid rgba(201, 168, 76, 0.8);
+    backdrop-filter: blur(1px);
+}
+
+/* Cinematic Preloader */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background-color: #1A1A1A;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#preloader.loaded {
+    transform: translateY(-100%);
+}
+
+#preloader-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: #C9A84C;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    animation: pulse 2s infinite ease-in-out alternate;
+}
+
+/* Editorial Grain Texture Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.04;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+}
+
+/* Glassmorphism Navbar */
+.glass-nav {
+    background: rgba(26, 26, 26, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(245, 237, 214, 0.1);
+}
+
+.glass-nav-light {
+    background: rgba(245, 237, 214, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.glass-nav-light .text-primary-light {
+    color: #1A1A1A;
+}
+
+.glass-nav-light .logo-glow {
+    text-shadow: none;
+    color: #1A1A1A;
+}
+
+/* Hero Animations */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.reveal-text-delay {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+}
+
+.reveal-fade {
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.6s forwards;
+}
+
+.reveal-fade-delay {
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.9s forwards;
+}
+
+@keyframes revealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-pulse-slow {
+    animation: slowPulse 6s infinite alternate;
+}
+
+@keyframes slowPulse {
+    from { opacity: 0.3; transform: scale(1); }
+    to { opacity: 0.6; transform: scale(1.1); }
+}
+
+.pulse-glow {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    animation: pulseWhatsapp 2s infinite;
+}
+
+@keyframes pulseWhatsapp {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Scroll Animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}

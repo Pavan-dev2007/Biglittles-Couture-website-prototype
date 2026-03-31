@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Consultation | Biglittles Couture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { light: "#F5EDD6", DEFAULT: "#C9A84C", dark: "#1A1A1A" }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-light text-primary-dark font-sans antialiased w-full m-0 p-0 overflow-x-hidden">
+    <!-- Cinematic Preloader -->
+    <div id="preloader">
+        <h1 id="preloader-logo">Biglittles</h1>
+    </div>
+
+    <!-- Editorial Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <nav class="w-full fixed top-0 z-50 px-6 py-4 flex justify-between items-center glass-nav-light">
+        <div class="flex items-center space-x-6 z-20">
+            <a href="index.html" class="text-primary-dark hover:text-primary transition-colors text-sm font-medium tracking-widest uppercase flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back
+            </a>
+        </div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+            <a href="index.html" class="text-3xl font-serif text-primary-dark hover:text-primary uppercase tracking-[0.2em]">Biglittles</a>
+        </div>
+    </nav>
+    <main class="min-h-screen w-full flex flex-col items-center px-6 py-32 md:px-24">
+        <h1 class="text-4xl md:text-5xl font-serif tracking-widest uppercase text-center mb-6 fade-in-section">Book a Consultation</h1>
+        <p class="text-center font-light tracking-wide text-primary-dark/70 mb-16 max-w-xl fade-in-section" style="transition-delay: 100ms;">
+            Experience bespoke luxury. Schedule a private viewing at our Kochi studio, or arrange a virtual appointment.
+        </p>
+        <form action="https://formspree.io/f/xbjnqweq" method="POST" class="w-full max-w-2xl flex flex-col gap-6 bg-white/40 backdrop-blur-md p-8 md:p-12 shadow-sm border border-primary/20 fade-in-section mt-4" style="transition-delay: 200ms;">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" name="First Name" placeholder="First Name *" class="w-full bg-transparent border-b border-primary-dark/20 py-3 focus:outline-none focus:border-primary transition-colors font-light" required>
+                <input type="text" name="Last Name" placeholder="Last Name *" class="w-full bg-transparent border-b border-primary-dark/20 py-3 focus:outline-none focus:border-primary transition-colors font-light" required>
+            </div>
+            <input type="email" name="Email" placeholder="Email Address *" class="w-full bg-transparent border-b border-primary-dark/20 py-3 focus:outline-none focus:border-primary transition-colors font-light" required>
+            <input type="tel" name="Phone" placeholder="Phone Number *" class="w-full bg-transparent border-b border-primary-dark/20 py-3 focus:outline-none focus:border-primary transition-colors font-light" required>
+            <select name="Consultation Type" class="w-full bg-transparent border-b border-primary-dark/20 py-3 focus:outline-none focus:border-primary transition-colors font-light text-primary-dark/70" required>
+                <option value="" disabled selected>Select Consultation Type *</option>
+                <option value="in_studio">In-Studio Appointment (Kochi)</option>
+                <option value="virtual">Virtual Consultation</option>
+            </select>
+            <input type="date" name="Date" class="w-full bg-transparent border-b border-primary-dark/20 py-3 focus:outline-none focus:border-primary transition-colors font-light text-primary-dark/70" required>
+            <textarea name="Message" placeholder="Tell us about your requirements..." rows="4" class="w-full bg-transparent border-b border-primary-dark/20 py-3 focus:outline-none focus:border-primary transition-colors font-light resize-none mt-4"></textarea>
+            <button type="submit" class="w-full mt-8 px-8 py-4 bg-primary text-primary-dark font-medium tracking-widest uppercase hover:bg-primary-dark hover:text-primary-light transition-all duration-300 cursor-pointer">Request Appointment</button>
+        </form>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

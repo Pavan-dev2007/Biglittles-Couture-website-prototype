@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Find Us | Biglittles Couture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: { light: "#F5EDD6", DEFAULT: "#C9A84C", dark: "#1A1A1A" } }, fontFamily: { serif: ['"Cormorant Garamond"', 'serif'], sans: ['"Inter"', 'sans-serif'], } } } }
+    </script>
+</head>
+<body class="bg-primary-light text-primary-dark font-sans antialiased w-full m-0 p-0 overflow-x-hidden">
+    <!-- Cinematic Preloader -->
+    <div id="preloader">
+        <h1 id="preloader-logo">Biglittles</h1>
+    </div>
+
+    <!-- Editorial Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <nav class="w-full fixed top-0 z-50 px-6 py-4 flex justify-between items-center glass-nav-light">
+        <div class="flex items-center space-x-6 z-20">
+            <a href="index.html" class="text-primary-dark hover:text-primary transition-colors text-sm font-medium tracking-widest uppercase flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back
+            </a>
+        </div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+            <a href="index.html" class="text-3xl font-serif text-primary-dark hover:text-primary uppercase tracking-[0.2em]">Biglittles</a>
+        </div>
+    </nav>
+    <main class="min-h-screen w-full flex flex-col items-center px-6 py-32 md:px-24">
+        <h1 class="text-4xl md:text-5xl font-serif tracking-widest uppercase text-center mb-16 fade-in-section">Contact & Find Us</h1>
+        
+        <div class="w-full max-w-5xl flex flex-col md:flex-row gap-16 fade-in-section" style="transition-delay: 200ms;">
+            <div class="w-full md:w-1/2 flex flex-col gap-8">
+                <div>
+                    <h2 class="text-xl font-serif text-primary tracking-widest uppercase mb-4 border-b border-primary-dark/20 pb-2">Location</h2>
+                    <p class="font-light text-primary-dark/80 tracking-wide leading-relaxed">Alliance Residency<br/>Marine Drive<br/>Kochi, Kerala, India</p>
+                </div>
+                <div>
+                    <h2 class="text-xl font-serif text-primary tracking-widest uppercase mb-4 border-b border-primary-dark/20 pb-2">Hours</h2>
+                    <p class="font-light text-primary-dark/80 tracking-wide leading-relaxed">Monday - Saturday: 10:00 AM - 7:00 PM<br/>Sunday: By Appointment Only</p>
+                </div>
+                <div>
+                    <h2 class="text-xl font-serif text-primary tracking-widest uppercase mb-4 border-b border-primary-dark/20 pb-2">Inquiries</h2>
+                    <p class="font-light text-primary-dark/80 tracking-wide leading-relaxed">hello@biglittlescouture.com<br/>+91 98765 43210 (WhatsApp)</p>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 bg-white/40 backdrop-blur-md min-h-[400px] flex items-center justify-center border border-primary/20 p-8 text-center text-primary-dark/50 tracking-widest uppercase text-sm font-light">
+                <p>Interactive Map Embed Placeholder<br/>(Requires API Key)</p>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

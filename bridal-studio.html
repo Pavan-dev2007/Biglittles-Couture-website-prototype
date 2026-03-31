@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bridal Studio | Biglittles Couture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: { light: "#F5EDD6", DEFAULT: "#C9A84C", dark: "#1A1A1A" } }, fontFamily: { serif: ['"Cormorant Garamond"', 'serif'], sans: ['"Inter"', 'sans-serif'], } } } }
+    </script>
+</head>
+<body class="bg-primary-light text-primary-dark font-sans antialiased w-full m-0 p-0 overflow-x-hidden">
+    <!-- Cinematic Preloader -->
+    <div id="preloader">
+        <h1 id="preloader-logo">Biglittles</h1>
+    </div>
+
+    <!-- Editorial Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <nav class="w-full fixed top-0 z-50 px-6 py-4 flex justify-between items-center glass-nav-light">
+        <div class="flex items-center space-x-6 z-20">
+            <a href="index.html" class="text-primary-dark hover:text-primary transition-colors text-sm font-medium tracking-widest uppercase flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back
+            </a>
+        </div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+            <a href="index.html" class="text-3xl font-serif text-primary-dark hover:text-primary uppercase tracking-[0.2em]">Biglittles</a>
+        </div>
+    </nav>
+    <main class="min-h-screen w-full flex flex-col items-center px-6 py-32 md:px-24">
+        <h1 class="text-4xl md:text-5xl font-serif tracking-widest uppercase text-center mb-6 fade-in-section">The Bridal Studio</h1>
+        <p class="text-center font-light tracking-wide text-primary-dark/80 mb-24 max-w-2xl text-lg fade-in-section" style="transition-delay: 100ms;">
+            A step-by-step journey into the creation of your bespoke bridal masterpiece.
+        </p>
+
+        <div class="max-w-4xl w-full flex flex-col gap-24">
+            <div class="flex flex-col md:flex-row gap-8 items-center fade-in-section">
+                <div class="w-full md:w-1/2 aspect-square relative border border-primary/20 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?q=80&w=2070" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col gap-4">
+                    <h2 class="text-2xl font-serif tracking-widest uppercase text-primary">01. The Consultation</h2>
+                    <p class="font-light text-primary-dark/80 tracking-wide leading-relaxed">
+                        We begin with an in-depth conversation—either in our Kochi studio or virtually—to understand your vision, preferences, and wedding theme.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row-reverse gap-8 items-center fade-in-section">
+                <div class="w-full md:w-1/2 aspect-square relative border border-primary/20 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1584346762335-5154332ab1b5?q=80&w=1964" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col gap-4">
+                    <h2 class="text-2xl font-serif tracking-widest uppercase text-primary">02. Design & Sketch</h2>
+                    <p class="font-light text-primary-dark/80 tracking-wide leading-relaxed">
+                        Our head designer translates your ideas into vivid sketches, presenting fabric swatches and hand-embroidery options.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center fade-in-section">
+                <div class="w-full md:w-1/2 aspect-square relative border border-primary/20 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1596455607563-ad6193f76b17?q=80&w=2072" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col gap-4">
+                    <h2 class="text-2xl font-serif tracking-widest uppercase text-primary">03. The Fittings</h2>
+                    <p class="font-light text-primary-dark/80 tracking-wide leading-relaxed">
+                        Through multiple muslin and toile fittings, we sculpt the silhouette to perfection before the final embellishments are applied.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

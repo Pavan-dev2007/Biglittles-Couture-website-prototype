@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Biglittles | Biglittles Couture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: { light: "#F5EDD6", DEFAULT: "#C9A84C", dark: "#1A1A1A" } }, fontFamily: { serif: ['"Cormorant Garamond"', 'serif'], sans: ['"Inter"', 'sans-serif'], } } } }
+    </script>
+</head>
+<body class="bg-primary-light text-primary-dark font-sans antialiased w-full m-0 p-0 overflow-x-hidden">
+    <!-- Cinematic Preloader -->
+    <div id="preloader">
+        <h1 id="preloader-logo">Biglittles</h1>
+    </div>
+
+    <!-- Editorial Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <nav class="w-full fixed top-0 z-50 px-6 py-4 flex justify-between items-center glass-nav-light">
+        <div class="flex items-center space-x-6 z-20">
+            <a href="index.html" class="text-primary-dark hover:text-primary transition-colors text-sm font-medium tracking-widest uppercase flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back
+            </a>
+        </div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+            <a href="index.html" class="text-3xl font-serif text-primary-dark hover:text-primary uppercase tracking-[0.2em]">Biglittles</a>
+        </div>
+    </nav>
+    <main class="min-h-screen w-full flex flex-col items-center px-6 py-32 md:px-24">
+        <h1 class="text-4xl md:text-5xl font-serif tracking-widest uppercase text-center mb-12 fade-in-section">House of Biglittles</h1>
+        <div class="max-w-3xl flex flex-col gap-8 text-lg font-light tracking-wide text-primary-dark/80 leading-relaxed text-center fade-in-section" style="transition-delay: 200ms;">
+            <p>Founded on the belief that every bride deserves a masterpiece, Biglittles Couture stands as a beacon of artisanal luxury in Kochi, Kerala.</p>
+            <p>Our atelier is powered by a dedicated women-led workforce, blending heritage weaving techniques with contemporary silhouettes.</p>
+        </div>
+        <div class="w-full max-w-4xl aspect-video relative mt-16 fade-in-section overflow-hidden" style="transition-delay: 400ms;">
+            <img src="https://images.unsplash.com/photo-1596455607563-ad6193f76b17?q=80&w=2072&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 hover:scale-105">
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
