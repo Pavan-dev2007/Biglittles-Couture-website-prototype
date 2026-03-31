@@ -66,6 +66,23 @@ body {
     letter-spacing: 0.3em;
     text-transform: uppercase;
     animation: pulse 2s infinite ease-in-out alternate;
+    margin-bottom: 24px;
+}
+
+#preloader::after {
+    content: "";
+    position: absolute;
+    margin-top: 100px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-top-color: #C9A84C;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
 
 /* Editorial Grain Texture Overlay */
